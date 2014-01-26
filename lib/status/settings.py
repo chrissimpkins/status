@@ -11,7 +11,7 @@ app_name = 'status'
 #------------------------------------------------------------------------------
 major_version = "0"
 minor_version = "2"
-patch_version = "0"
+patch_version = "1"
 
 #------------------------------------------------------------------------------
 # Debug Flag (switch to False for production release code)
@@ -47,4 +47,13 @@ The URL can be entered with or without the protocol. If you do not enter a proto
 
 EXAMPLES
   status http://google.com
-  status google.com"""
+  status google.com
+  status -p httpbin.org/post
+
+SOURCE REPOSITORY
+  https://github.com/chrissimpkins/status
+
+ISSUE TRACKING
+  https://github.com/chrissimpkins/status/issues
+  """
+
