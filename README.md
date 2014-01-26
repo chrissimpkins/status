@@ -1,9 +1,9 @@
 # status
 
 
-## HTTP status codes for GET and POST requests
+### HTTP status codes for GET and POST requests
 
-### Install
+## Install
 
 You can install from PyPI with pip using the following command:
 
