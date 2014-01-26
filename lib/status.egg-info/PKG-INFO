@@ -1,6 +1,6 @@
-Metadata-Version: 1.0
+Metadata-Version: 1.1
 Name: status
-Version: 0.2.0
+Version: 0.2.1
 Summary: Report the HTTP status codes for GET and POST requests
 Home-page: https://github.com/chrissimpkins/status
 Author: Christopher Simpkins
@@ -50,3 +50,21 @@ Description: ================
         
 Keywords: HTTP,request,POST,GET,status code,status,website,URL
 Platform: any
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Programming Language :: Python :: 3.1
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Internet
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Internet :: WWW/HTTP :: HTTP Servers
+Classifier: Topic :: Internet :: WWW/HTTP :: Site Management
+Classifier: Topic :: Internet :: WWW/HTTP :: Site Management :: Link Checking
+Classifier: Topic :: System
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Networking :: Monitoring
