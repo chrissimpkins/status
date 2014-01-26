@@ -13,3 +13,6 @@ lib/status.egg-info/entry_points.txt
 lib/status.egg-info/requires.txt
 lib/status.egg-info/top_level.txt
 lib/status/commands/__init__.py
+lib/status/commands/help.py
+lib/status/commands/usage.py
+lib/status/commands/version.py
