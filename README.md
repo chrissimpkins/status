@@ -25,6 +25,7 @@ status will report the returned status code with a GET or POST request.  The gen
 status [option] <url>
 ```
 
+It is not necessary to include the protocol (http://) in your URL.  If you enter a URL without the protocol, status will prefix it with http://.  If you intend to test with the SSL protocol (https://), then you need to be explicit in your URL argument.
 
 ### GET Request Status Codes
 
