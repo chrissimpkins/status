@@ -1,6 +1,6 @@
 Metadata-Version: 1.0
 Name: status
-Version: 0.1.1
+Version: 0.2.0
 Summary: Report the HTTP status codes for GET and POST requests
 Home-page: https://github.com/chrissimpkins/status
 Author: Christopher Simpkins
@@ -9,13 +9,13 @@ License: MIT license
 Description: ================
          status
         ================
-        ----------
+        ----------------------------------------------
          HTTP status codes for GET and POST requests
-        ----------
+        ----------------------------------------------
         
         Install
         =============
-        You can install from PyPI with pip using the following command::
+        You can install status from PyPI with pip using the following command::
         
             pip install status
         
@@ -30,15 +30,19 @@ Description: ================
         
             status [option] <url>
         
+        It is not necessary to include the protocol (http://) in your URL. If you enter a URL without the protocol, status will prefix it with http://.  If you intend to test with the secure HTTP protocol (https://), then make this explicit in your URL.
+        
+        
         GET Request Status Codes
-        -------------
-        GET is the default request type. Simply enter the full URL as an argument to status::
+        ------------------------------
+        GET is the default request type. Enter the URL as an argument to status without an option::
         
             status <url>
         
         
+        
         POST Request Status Codes
-        -------------
+        ------------------------------
         To use a POST request, add the ``-p`` or ``--post`` option::
         
             status -p <url>
