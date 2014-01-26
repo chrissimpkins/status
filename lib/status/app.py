@@ -41,27 +41,14 @@ def main():
     # Test that user entered a primary command, print usage if not
     #------------------------------------------------------------------------------------------
     if not c.command_suite_validates():
-        from Naked.commands.usage import Usage
+        from status.commands.usage import Usage
         Usage().print_usage()
         sys.exit(1)
     #------------------------------------------------------------------------------------------
     # [ PRIMARY COMMAND LOGIC ]
     #   Enter your command line parsing logic below
     #------------------------------------------------------------------------------------------
-    # Example usage ------------------------------->>>
-    if c.cmd == 'hello':
-    	if c.cmd2 = 'world':
-    		if c.option('--print'):
-    			print('Hello World!')
-    elif c.cmd == 'spam':
-    	if c.option_with_arg('--with'):
-    		friend_of_spam = c.arg('--with')      # user enters <executable> spam --with eggs
-    		print('spam and ' + friend_of_spam)   # prints 'spam and eggs'
-    elif c.cmd == 'naked':
-        if c.flag("--language"):
-            lang = c.flag_arg("--language")       # user enters <executable> naked --language=python
-            print("Naked & " + lang)              # prints 'Naked & python'
-    # End example --------------------------------->>>
+
 
 
     #------------------------------------------------------------------------------------------
@@ -70,13 +57,13 @@ def main():
     #   --> settings for user messages are assigned in the lib/status/settings.py file
     #------------------------------------------------------------------------------------------
     elif c.help():  # User requested naked help (help.py module in commands directory)
-        from Naked.commands.help import Help
+        from status.commands.help import Help
         Help().print_help()
     elif c.usage():  # user requested naked usage info (usage.py module in commands directory)
-        from Naked.commands.usage import Usage
+        from status.commands.usage import Usage
         Usage().print_usage()
     elif c.version(): # user requested naked version (version.py module in commands directory)
-        from Naked.commands.version import Version
+        from status.commands.version import Version
         Version().print_version()
     #------------------------------------------------------------------------------------------
     # [ DEFAULT MESSAGE FOR MATCH FAILURE ]

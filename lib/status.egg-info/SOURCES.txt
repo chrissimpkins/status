@@ -1,0 +1,15 @@
+MANIFEST.in
+setup.cfg
+setup.py
+docs/LICENSE
+docs/README.rst
+lib/status/__init__.py
+lib/status/app.py
+lib/status/settings.py
+lib/status.egg-info/PKG-INFO
+lib/status.egg-info/SOURCES.txt
+lib/status.egg-info/dependency_links.txt
+lib/status.egg-info/entry_points.txt
+lib/status.egg-info/requires.txt
+lib/status.egg-info/top_level.txt
+lib/status/commands/__init__.py

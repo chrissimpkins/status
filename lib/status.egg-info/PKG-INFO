@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: status
+Version: 0.1.0
+Summary: Report the HTTP status codes for GET and POST requests
+Home-page: https://github.com/chrissimpkins/status
+Author: Christopher Simpkins
+Author-email: chris@zerolabs.net
+License: MIT license
+Description: UNKNOWN
+Keywords: HTTP,request,POST,GET,status code,status,website,URL
+Platform: any

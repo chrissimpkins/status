@@ -30,12 +30,12 @@ def version_read():
 setup(
     name='status',
     version=version_read(),
-    description='A command line application framework',
+    description='Report the HTTP status codes for GET and POST requests',
     long_description=(docs_read('README.rst')),
-    url='',
+    url='https://github.com/chrissimpkins/status',
     license='MIT license',
     author='Christopher Simpkins',
-    author_email='',
+    author_email='chris@zerolabs.net',
     platforms=['any'],
     entry_points = {
         'console_scripts': [
@@ -44,8 +44,8 @@ setup(
     },
     packages=find_packages("lib"),
     package_dir={'': 'lib'},
-    install_requires=['Naked', 'requests', 'pyyaml'],
-    keywords='',
+    install_requires=['Naked'],
+    keywords='HTTP, request, POST, GET, status code, status, website, URL',
     include_package_data=True,
     classifiers=[],
 )
