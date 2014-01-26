@@ -3,6 +3,9 @@
 
 ### HTTP status codes for GET and POST requests
 
+## About
+Status is a command line application that returns the HTTP response status code for a GET or POST request to a user submitted URL.  It has been tested in cPython 2.7, 3.2, 3.3 and pypy 2.2.1 (Python v2.7.3)
+
 ## Install
 
 You can install from PyPI with pip using the following command:
@@ -43,3 +46,8 @@ To use a POST request, add the `-p` or `--post` option:
 ```
 status -p <url>
 ```
+
+## Versions
+v0.2.1 - exception handling for HTTP connection errors, help documentation updates
+v0.2.0 - first production release
+v0.1.x - testing releases
