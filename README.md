@@ -25,11 +25,11 @@ status will report the returned status code with a GET or POST request.  The gen
 status [option] <url>
 ```
 
-It is not necessary to include the protocol (http://) in your URL.  If you enter a URL without the protocol, status will prefix it with http://.  If you intend to test with the SSL protocol (https://), then you need to be explicit in your URL argument.
+It is not necessary to include the protocol (http://) in your URL.  If you enter a URL without the protocol, status will prefix it with http://.  If you intend to test with the secure HTTP protocol (https://), then make this explicit in your URL.
 
 ### GET Request Status Codes
 
-GET is the default request type. Simply enter the full URL as an argument to status:
+GET is the default request type. Enter the URL as an argument to status without an option:
 
 ```
 status <url>
