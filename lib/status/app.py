@@ -24,7 +24,9 @@
 def main():
     import sys
     from Naked.commandline import Command
-    from Naked.toolshed.state import StateObject
+    from Naked.toolshed.network import HTTP
+    #from Naked.toolshed.state import StateObject
+    from Naked.toolshed.system import stderr, exit_success, exit_fail
 
     #------------------------------------------------------------------------------------------
     # [ Instantiate command line object ]
@@ -34,7 +36,7 @@ def main():
     #------------------------------------------------------------------------------
     # [ Instantiate state object ]
     #------------------------------------------------------------------------------
-    state = StateObject()
+    # state = StateObject()
     #------------------------------------------------------------------------------------------
     # [ Command Suite Validation ] - early validation of appropriate command syntax
     # Test that user entered a primary command, print usage if not
@@ -42,11 +44,31 @@ def main():
     if not c.command_suite_validates():
         from status.commands.usage import Usage
         Usage().print_usage()
-        sys.exit(1)
+        exit_fail()
     #------------------------------------------------------------------------------------------
     # [ PRIMARY COMMAND LOGIC ]
     #   Enter your command line parsing logic below
     #------------------------------------------------------------------------------------------
+
+    # POST request
+    if c.option("-p") or c.option("--post"):
+        if c.arg1:
+            http = HTTP(c.arg1)
+            http.post(False)
+            print(http.res.status_code)
+            exit_success()
+        else:
+            stderr("Please enter a URL to test.", 1)
+
+    # GET request
+    else:
+        if c.arg0:
+            http = HTTP(c.arg0)
+            http.get(False)
+            print(http.res.status_code)
+            exit_success()
+        else:
+            stderr("Please enter a URL to test", 1)
 
 
 
@@ -55,7 +77,7 @@ def main():
     # Naked framework provides default help, usage, and version commands for all applications
     #   --> settings for user messages are assigned in the lib/status/settings.py file
     #------------------------------------------------------------------------------------------
-    elif c.help():  # User requested naked help (help.py module in commands directory)
+    if c.help():  # User requested naked help (help.py module in commands directory)
         from status.commands.help import Help
         Help().print_help()
     elif c.usage():  # user requested naked usage info (usage.py module in commands directory)
