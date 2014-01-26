@@ -24,9 +24,9 @@
 def main():
     import sys
     from Naked.commandline import Command
-    from Naked.toolshed.network import HTTP
     #from Naked.toolshed.state import StateObject
     from Naked.toolshed.system import stderr, exit_success, exit_fail
+    from status.commands.http_request import Get, Post
 
     #------------------------------------------------------------------------------------------
     # [ Instantiate command line object ]
@@ -45,32 +45,6 @@ def main():
         from status.commands.usage import Usage
         Usage().print_usage()
         exit_fail()
-    #------------------------------------------------------------------------------------------
-    # [ PRIMARY COMMAND LOGIC ]
-    #   Enter your command line parsing logic below
-    #------------------------------------------------------------------------------------------
-
-    # POST request
-    if c.option("-p") or c.option("--post"):
-        if c.arg1:
-            http = HTTP(c.arg1)
-            http.post(False)
-            print(http.res.status_code)
-            exit_success()
-        else:
-            stderr("Please enter a URL to test.", 1)
-
-    # GET request
-    else:
-        if c.arg0:
-            http = HTTP(c.arg0)
-            http.get(False)
-            print(http.res.status_code)
-            exit_success()
-        else:
-            stderr("Please enter a URL to test", 1)
-
-
 
     #------------------------------------------------------------------------------------------
     # [ NAKED FRAMEWORK COMMANDS ]
@@ -87,12 +61,29 @@ def main():
         from status.commands.version import Version
         Version().print_version()
     #------------------------------------------------------------------------------------------
+    # [ PRIMARY COMMAND LOGIC ]
+    #   Enter your command line parsing logic below
+    #------------------------------------------------------------------------------------------
+
+    # POST request
+    elif c.option("-p") or c.option("--post"):
+        if c.arg1:
+            post = Post(c.arg1)
+            post.post_response()
+        else:
+            stderr("Please enter a URL to test.", 1)
+
+    # GET request
+    elif len(c.arg0) > 0:
+        get = Get(c.arg0)
+        get.get_response()
+
+    #------------------------------------------------------------------------------------------
     # [ DEFAULT MESSAGE FOR MATCH FAILURE ]
     # Message to provide to the user when all above conditional logic fails to meet a true condition
     #------------------------------------------------------------------------------------------
     else:
-        print("Could not complete the command that you entered.  Please try again.")
-        sys.exit(1) #exit
+        stderr("Please enter a URL to test.", 1)
 
 if __name__ == '__main__':
     main()
