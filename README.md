@@ -1,4 +1,4 @@
-# status
+# status [![PyPI version](https://badge.fury.io/py/status.png)](https://pypi.python.org/pypi/status)
 
 
 ### HTTP status codes for GET and POST requests
