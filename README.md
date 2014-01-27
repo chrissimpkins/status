@@ -49,6 +49,8 @@ status -p <url>
 
 ## Versions
 
+v0.2.2 - minor fixes, application help documentation clarifications
+
 v0.2.1 - exception handling for HTTP connection errors, help documentation updates
 
 v0.2.0 - first production release

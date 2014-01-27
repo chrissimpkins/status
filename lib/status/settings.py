@@ -11,7 +11,7 @@ app_name = 'status'
 #------------------------------------------------------------------------------
 major_version = "0"
 minor_version = "2"
-patch_version = "1"
+patch_version = "2"
 
 #------------------------------------------------------------------------------
 # Debug Flag (switch to False for production release code)
@@ -43,10 +43,13 @@ USAGE
 OPTIONS
   -p  --post    POST request
 
-The URL can be entered with or without the protocol. If you do not enter a protocol (http:// or https://), then http:// is assumed.  If you intend to test with the secure HTTP protocol, then make this explicit in your URL.
+The default is a GET request.  You can modify this to use a POST request with the -p or --post option.
+
+The URL argument can be entered with or without the protocol. If you do not enter a protocol (http:// or https://), then http:// is assumed.  If you intend to test with the secure HTTP protocol, then make this explicit in your URL.
 
 EXAMPLES
   status http://google.com
+  status https://www.google.com
   status google.com
   status -p httpbin.org/post
 
