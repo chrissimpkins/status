@@ -46,7 +46,7 @@ setup(
     },
     packages=find_packages("lib"),
     package_dir={'': 'lib'},
-    install_requires=['Naked==0.1.20'],
+    install_requires=['Naked'],
     keywords='HTTP, request, POST, GET, status code, status, website, URL',
     include_package_data=True,
     classifiers=[

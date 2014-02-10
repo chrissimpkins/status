@@ -47,6 +47,8 @@ To use a POST request, add the ``-p`` or ``--post`` option::
 Versions
 =============
 
+v.0.2.4 - unfreeze Naked framework version dependency
+
 v0.2.3 - updated Naked framework dependency
 
 v0.2.2 - minor fixes, documentation updates

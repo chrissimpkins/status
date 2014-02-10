@@ -11,7 +11,7 @@ app_name = 'status'
 #------------------------------------------------------------------------------
 major_version = "0"
 minor_version = "2"
-patch_version = "3"
+patch_version = "4"
 
 #------------------------------------------------------------------------------
 # Debug Flag (switch to False for production release code)

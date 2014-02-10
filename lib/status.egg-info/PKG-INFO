@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: status
-Version: 0.2.2
+Version: 0.2.4
 Summary: Report the HTTP status codes for GET and POST requests
 Home-page: https://github.com/chrissimpkins/status
 Author: Christopher Simpkins
@@ -54,6 +54,12 @@ Description: ================
         
         Versions
         =============
+        
+        v.0.2.4 - unfreeze Naked framework version dependency
+        
+        v0.2.3 - updated Naked framework dependency
+        
+        v0.2.2 - minor fixes, documentation updates
         
         v0.2.1 - exception handling for HTTP connection errors, help documentation updates
         

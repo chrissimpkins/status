@@ -49,6 +49,8 @@ status -p <url>
 
 ## Versions
 
+v0.2.4 - removed Naked framework dependency version freeze
+
 v0.2.3 - updated Naked framework dependency
 
 v0.2.2 - minor fixes, application help documentation clarifications
