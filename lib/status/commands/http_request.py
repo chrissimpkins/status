@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # encoding: utf-8
 
+import sys
 from Naked.toolshed.network import HTTP
 from Naked.toolshed.system import exit_success
 from Naked.toolshed.system import stderr
@@ -16,6 +17,15 @@ class Get:
             http = HTTP(the_url)
             http.get()
             resp = http.response()
+
+            # confirm that a response was returned, abort if not
+            if resp == None and the_url.startswith('https://'):
+                stderr("Unable to connect to the requested URL. This can happen if the secure HTTP protocol is not supported at the requested URL.")
+                sys.exit(1)
+            elif resp == None:
+                stderr("Unable to connect to the requested URL. Please confirm your URL and try again.")
+                sys.exit(1)
+
             if len(resp.history) > 0:
                 count = len(resp.history)
                 for i in range(count):
@@ -38,6 +48,15 @@ class Post:
             http = HTTP(the_url)
             http.post()
             resp = http.response()
+
+            # confirm that a response was returned, abort if not
+            if resp == None and the_url.startswith('https://'):
+                stderr("Unable to connect to the requested URL. This can happen if the secure HTTP protocol is not supported at the requested URL.")
+                sys.exit(1)
+            elif resp == None:
+                stderr("Unable to connect to the requested URL. Please confirm your URL and try again.")
+                sys.exit(1)
+
             if len(resp.history) > 0:
                 count = len(resp.history)
                 for i in range(count):
