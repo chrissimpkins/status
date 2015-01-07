@@ -32,12 +32,12 @@ def version_read():
 setup(
     name='status',
     version=version_read(),
-    description='Report the HTTP status codes for GET and POST requests',
+    description='HTTP status code reporting for GET and POST requests',
     long_description=(docs_read('README.rst')),
     url='https://github.com/chrissimpkins/status',
     license='MIT license',
     author='Christopher Simpkins',
-    author_email='chris@zerolabs.net',
+    author_email='git.simpkins@gmail.com',
     platforms=['any'],
     entry_points = {
         'console_scripts': [
@@ -47,7 +47,7 @@ setup(
     packages=find_packages("lib"),
     package_dir={'': 'lib'},
     install_requires=['Naked'],
-    keywords='HTTP, request, POST, GET, status code, status, website, URL',
+    keywords='HTTP, request, POST, GET, status code, status, website, URL, internet, network, networking',
     include_package_data=True,
     classifiers=[
         'Programming Language :: Python :: 2',
@@ -67,6 +67,7 @@ setup(
         'Topic :: Internet :: WWW/HTTP :: Site Management :: Link Checking',
         'Topic :: System',
         'Topic :: System :: Networking',
-        'Topic :: System :: Networking :: Monitoring'
+        'Topic :: System :: Networking :: Monitoring',
+        'License :: OSI Approved :: MIT License'
     ],
 )
