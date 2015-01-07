@@ -1,10 +1,10 @@
 Metadata-Version: 1.1
 Name: status
 Version: 0.2.5
-Summary: Report the HTTP status codes for GET and POST requests
+Summary: HTTP status code reporting for GET and POST requests
 Home-page: https://github.com/chrissimpkins/status
 Author: Christopher Simpkins
-Author-email: chris@zerolabs.net
+Author-email: git.simpkins@gmail.com
 License: MIT license
 Description: ================
          status
@@ -15,11 +15,13 @@ Description: ================
         
         About
         =============
-        Status is a command line application that returns the HTTP response status code for a GET or POST request to a user submitted URL.  It has been tested in cPython 2.7, 3.2, 3.3 and pypy 2.2.1 (Python v2.7.3)
+        status is a cross-platform command line application that returns the HTTP response status code for a GET or POST request to a user submitted URL.
+        
+        It has been tested in cPython 2.7.x, 3.4.x and pypy 2.4.0 (Python v2.7.8)
         
         Install
         =============
-        You can install status from PyPI with pip using the following command::
+        You can install status with the Python package manager pip::
         
             pip install status
         
@@ -27,6 +29,13 @@ Description: ================
         
             python setup.py install
         
+        Upgrade
+        ==============
+        You can upgrade status with pip. Use the following command::
+        
+            pip install --upgrade status
+        
+        or download the source repository and use the above instructions for a new install from source.
         
         Usage
         =============
@@ -55,19 +64,20 @@ Description: ================
         Versions
         =============
         
-        v.0.2.4 - unfreeze Naked framework version dependency
+        v0.2.5 - bug fix: connection error handling and new tests in cPython 2.7.9, 3.4.2 + pypy 2.4.0
         
-        v0.2.3 - updated Naked framework dependency
+        v0.2.4 - updated application dependencies
         
-        v0.2.2 - minor fixes, documentation updates
+        v0.2.3 - updated application dependencies
+        
+        v0.2.2 - minor bug fixes, documentation updates
         
         v0.2.1 - exception handling for HTTP connection errors, help documentation updates
         
-        v0.2.0 - first production release
+        v0.2.0 - initial release
         
-        v0.1.x - testing releases
         
-Keywords: HTTP,request,POST,GET,status code,status,website,URL
+Keywords: HTTP,request,POST,GET,status code,status,website,URL,internet,network,networking
 Platform: any
 Classifier: Programming Language :: Python :: 2
 Classifier: Programming Language :: Python :: 2.6
@@ -87,3 +97,4 @@ Classifier: Topic :: Internet :: WWW/HTTP :: Site Management :: Link Checking
 Classifier: Topic :: System
 Classifier: Topic :: System :: Networking
 Classifier: Topic :: System :: Networking :: Monitoring
+Classifier: License :: OSI Approved :: MIT License
