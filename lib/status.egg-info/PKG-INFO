@@ -1,6 +1,6 @@
 Metadata-Version: 1.1
 Name: status
-Version: 0.2.4
+Version: 0.2.5
 Summary: Report the HTTP status codes for GET and POST requests
 Home-page: https://github.com/chrissimpkins/status
 Author: Christopher Simpkins
