@@ -1,4 +1,4 @@
-# status [![Current Version](https://pypip.in/version/status/badge.svg?text=version&style=flat)](https://pypi.python.org/pypi/status/) [![License](https://pypip.in/license/status/badge.svg?style=flat)](https://github.com/chrissimpkins/status/blob/master/docs/LICENSE)
+# status [![Current Version](https://img.shields.io/pypi/v/status.svg?label=version&style=flat)](https://pypi.python.org/pypi/status/) [![License](https://img.shields.io/pypi/l/status.svg?style=flat)](https://github.com/chrissimpkins/status/blob/master/docs/LICENSE)
 
 
 ### HTTP status codes for GET and POST requests
